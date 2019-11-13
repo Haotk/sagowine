@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Marcellus&display=swap');
 body{
-	font-family: Monserrat,sans-serif
+	font-family: Roboto,sans-serif;
 }
 .header2{
 	width: 80%;
@@ -13,6 +14,7 @@ body{
 	text-align: center;
 }
 .main-star{
+	color: #333333;
 	width: 100%;
 	height: 50px;
 }
@@ -62,6 +64,7 @@ body{
 .product{
 	background-color: white;
 	width: 70%;
+	padding: 5px;
 	height: auto;
 	max-height: auto;
 	float: left;
@@ -79,7 +82,7 @@ body{
 	margin-left: 10%;
 }
 .imgproduct img{
-	margin-top: 1%;
+	margin-top: 5%;
 	width: 50%;
 	height: 99%;
 	margin-left: 1%;
@@ -105,7 +108,8 @@ body{
 	float: left;
 }
 .nameproduct p{
-	font-weight: bold;
+	text-align: center;
+	font-family: Marcellus,sans-serif;
 	width: 100%;
 }
 .quantityshopping{
@@ -117,9 +121,11 @@ body{
 	float: left;
 }
 .quantityshopping input{
-	width: 70%;
+	width: 80%;
+	background: #FDFDFD;
 	border: 1px solid #eee;
 	height: 40px;
+	border-radius: 5px;
 }
 .priceproduct{
 	height: 60.2px;
@@ -147,13 +153,16 @@ body{
 	margin-left: 5%;
 }
 .discount-code b{
+	font-family: Marcellus,sans-serif;
 	float: left;
 	width: 100%;
 	font-size: 25px;
+	font-height:600;
+	color: #333333;
 }
 .discount-code hr{
 	width: 20%;
-	border: 1.5px solid black;
+	border: 1px solid #333;
 	float: left;
 }
 .discount-code p{
@@ -162,47 +171,59 @@ body{
 	margin-top: 0px;
 }
 .discount-code input{
-	width: 94%;
-	height: 30px;
-	border: 1px solid black;
+	border: 1px solid #eee;
+    height: 40px;
+    padding: 0px 15px;
+    background: #fff;
+    outline: none;
+    width: 80%;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #333;
+    margin-bottom: 15px;
 }
 .discount-code button{
 	cursor: pointer;
-	margin-top: 20px;
-	background-color: #333333;
-	color: white;
-	width: 20%;
-	text-align: center;
-	border: 0px solid black;
-	height: 30px;
-	margin-bottom: 10px;
+    padding: 12px 20px;
+    outline: none;
+	background-color: #444!important;
+    color: #fff!important;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 10px;
+    border: 1px solid #444;
 }
 .borderdiscount{
+	width: 100%;
+	padding: 25px;
 	border: 1px solid #eee;
 	background-color: white;
-
 }
 .total{
 	background-color: white;
-	margin-top: 15px;
+	margin-top: 10px;
 	border: 1px solid #eee;
 	height: auto;
 	float: left;
 	width: 100%;
+	padding: 25px;
 }
 .classtotal{
 	margin-top: 5px;
 	margin-left: 5%;
 }
 .classtotal b{
+	color: #333;
 	width: 100%;
 	float: left;
+	line-height: 1.2;
+	font-family: Marcellus,sans-serif;
 	font-size: 25px;
 }
 .classtotal hr{
 	float: left;
-	width: 20%;
-	border: 1.5px solid black;
+	width: 25%;
+	border: 1px solid #333;
 }
 .infortotal{
 	width: 100%;
@@ -210,82 +231,99 @@ body{
 	margin-left: 5%;
 }
 .subtotal b{
+	color: #333333;
+	font-family: roboto,sans-serif;
 	width: 40%;
 	float: left;
 }
 .subtotal p{
+	color: #333333;
+	font-family: roboto,sans-serif;
 	margin-top: 2px;
 	width: 50%;
 	float: left;
 }
 .shipcost b{
+	color: #333333;
+	font-family: roboto,sans-serif;
 	width: 40%;
 	float: left;
 }
 .shipcost p{
+	color: #333333;
+	font-family: roboto,sans-serif;
 	margin-top: 2px;
 	width: 50%;
 	float: left;
 }
 .taxt b{
+	color: #333333;
+	font-family: roboto,sans-serif;	
 	width: 40%;
 	float: left;
 }
 .taxt p{
+	color: #333333;
+	font-family: roboto,sans-serif;	
 	margin-top: 2px;
 	width: 50%;
 	float: left;
-}
-.counpon b{
-	width: 40%;
-	float: left;
-}
-.counpon p{
-	margin-top: 2px;
-	width: 40%;
-	float: left;
-}
+}	
 .infortotal hr{
 	float: left;
 	width: 90%;
-	margin-top: 0px;	
+	margin-top: 0px;
+	border-top: 1px solid #eee;
 }
 .total-full{
 	margin-left: 5%;
 }
 .total-full b{
+	color: #333333;
+	font-family: roboto,sans-serif;	
 	width: 40%;
 	float: left;
 }
 .total-full p{
+	color:#dc4c46;
+	font-weight: 500;
 	margin-top: 2px;
 	width: 40%;
+	margin-left: 5px;
 	float: left;
 	margin-bottom: 5px;
 
 }
 .buy{
 	margin-left: 5%;
-	float: left;
 	width: 100%;
 	margin-bottom: 10px;
 }
-.check-out button{
+.check-out{
 	float: left;
-	height: 40px;
-	background-color: red;
-	border: 0px solid red;
-	color: white;
-	width: 30%;
+}
+.continue{
+	float: right;
+}
+.check-out button{
 	cursor: pointer;
+    display: inline-block;
+    padding: 12px 15px;
+	background-color: #dc4c46!important;
+    color: #fff!important;
+    font-weight: 500;
+    border: 1px solid #dc4c46;
+    font-size: 15px;
+    margin-top: 10px;
 }
 .continue button{
-	height: 40px;
-	width: 50%;
-	float: left;
-	margin-left: 2%;
-	background-color: #333333;
-	color: white;
-	border: 0px solid #333333;
 	cursor: pointer;
+    padding: 12px 10px;
+    outline: none;
+    margin-top: 10px;
+	background-color: #444!important;
+    color: #fff!important;
+    font-weight: 500;
+    font-size: 15px;
+    border: 1px solid #444;
 }
