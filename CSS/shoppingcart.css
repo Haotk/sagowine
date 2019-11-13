@@ -1,0 +1,291 @@
+body{
+	font-family: Monserrat,sans-serif
+}
+.header2{
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 50px;
+}
+.tittleshoppingcart{
+	width: 100%;
+	height: 30%;
+	background-color: #fbf9f2;
+	text-align: center;
+}
+.main-star{
+	width: 100%;
+	height: 50px;
+}
+#hr-star{
+	width: 10%;
+	float: left;
+	margin-left: 35%;
+}
+#hr-star hr{
+	margin-top: 2%;
+	width: 100%;
+	float: right;
+}
+#hr-star2{
+	width: 10%;
+	float: right;
+	margin-right: 35%;
+}
+#hr-star2 hr{
+	margin-top: 2%;
+}
+.set-star{
+	width: 10%;
+	float: left;
+	margin-top: -1.5%;
+}
+#royalwine{
+	color: #EAC47D;
+	font-weight: bold;
+	font-size: 35px;
+	margin-bottom: 5px;
+}
+#product-details{
+	font-family:;
+	color: black;
+	font-weight: bold;
+	font-size: 50px;
+	margin-top: 5px;
+}
+.main-shopping-cart{
+	width: 80%;
+
+	height: auto;
+	max-height: auto;
+	margin-left: 10%;
+}
+.product{
+	background-color: white;
+	width: 70%;
+	height: auto;
+	max-height: auto;
+	float: left;
+	margin-bottom: 50px;
+	border: 1px solid #eee;
+}
+.totalproduct{
+	margin-top: 10px;
+	margin-left: 20%;
+}
+.quantity{
+	margin-left: 34%;
+}
+.price{
+	margin-left: 10%;
+}
+.imgproduct img{
+	margin-top: 1%;
+	width: 50%;
+	height: 99%;
+	margin-left: 1%;
+}
+.imgproduct{
+	text-align: center;
+	float: left;
+	width: 16.66666667%;
+	height: 99%;
+}
+.inforproduct{
+	border-bottom: 1px solid #eee;
+	height: auto;
+	float: left;
+	width: 100%;
+}
+.nameproduct{
+	height: 75.2px;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	padding-top: 30px;
+	width: 41.66666667%;
+	float: left;
+}
+.nameproduct p{
+	font-weight: bold;
+	width: 100%;
+}
+.quantityshopping{
+	height: 75.2px;
+	padding-left: 3%;
+	border-right: 1px solid #eee;
+	width:13.66666667%;
+	padding-top: 30px;
+	float: left;
+}
+.quantityshopping input{
+	width: 70%;
+	border: 1px solid #eee;
+	height: 40px;
+}
+.priceproduct{
+	height: 60.2px;
+	border-right: 1px solid #eee;
+	width: 16.66666667%;
+	float: left;
+	padding-top: 45px;
+	text-align: center;
+}
+.removeproduct{
+	padding-top: 45px;
+	width: 7.33333%;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+}
+
+.discount-total{
+	width: 27%;
+	float: right;
+	height: 100%;
+}
+.discount-code {
+	margin-top: 5px;
+	margin-left: 5%;
+}
+.discount-code b{
+	float: left;
+	width: 100%;
+	font-size: 25px;
+}
+.discount-code hr{
+	width: 20%;
+	border: 1.5px solid black;
+	float: left;
+}
+.discount-code p{
+	width: 100%;
+	float: left;
+	margin-top: 0px;
+}
+.discount-code input{
+	width: 94%;
+	height: 30px;
+	border: 1px solid black;
+}
+.discount-code button{
+	cursor: pointer;
+	margin-top: 20px;
+	background-color: #333333;
+	color: white;
+	width: 20%;
+	text-align: center;
+	border: 0px solid black;
+	height: 30px;
+	margin-bottom: 10px;
+}
+.borderdiscount{
+	border: 1px solid #eee;
+	background-color: white;
+
+}
+.total{
+	background-color: white;
+	margin-top: 15px;
+	border: 1px solid #eee;
+	height: auto;
+	float: left;
+	width: 100%;
+}
+.classtotal{
+	margin-top: 5px;
+	margin-left: 5%;
+}
+.classtotal b{
+	width: 100%;
+	float: left;
+	font-size: 25px;
+}
+.classtotal hr{
+	float: left;
+	width: 20%;
+	border: 1.5px solid black;
+}
+.infortotal{
+	width: 100%;
+	float: left;
+	margin-left: 5%;
+}
+.subtotal b{
+	width: 40%;
+	float: left;
+}
+.subtotal p{
+	margin-top: 2px;
+	width: 50%;
+	float: left;
+}
+.shipcost b{
+	width: 40%;
+	float: left;
+}
+.shipcost p{
+	margin-top: 2px;
+	width: 50%;
+	float: left;
+}
+.taxt b{
+	width: 40%;
+	float: left;
+}
+.taxt p{
+	margin-top: 2px;
+	width: 50%;
+	float: left;
+}
+.counpon b{
+	width: 40%;
+	float: left;
+}
+.counpon p{
+	margin-top: 2px;
+	width: 40%;
+	float: left;
+}
+.infortotal hr{
+	float: left;
+	width: 90%;
+	margin-top: 0px;	
+}
+.total-full{
+	margin-left: 5%;
+}
+.total-full b{
+	width: 40%;
+	float: left;
+}
+.total-full p{
+	margin-top: 2px;
+	width: 40%;
+	float: left;
+	margin-bottom: 5px;
+
+}
+.buy{
+	margin-left: 5%;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.check-out button{
+	float: left;
+	height: 40px;
+	background-color: red;
+	border: 0px solid red;
+	color: white;
+	width: 30%;
+	cursor: pointer;
+}
+.continue button{
+	height: 40px;
+	width: 50%;
+	float: left;
+	margin-left: 2%;
+	background-color: #333333;
+	color: white;
+	border: 0px solid #333333;
+	cursor: pointer;
+}
