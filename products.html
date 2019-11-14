@@ -9,7 +9,8 @@
 	<script type="text/javascript" src="JS/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="js/sweetalerthanghieu.min.js"></script>
 	<script type="text/javascript" src="JS/owl.carousel.min.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/pagination.js"></script>
 	<!--END OF JAVASCRIPTTTTTTTTTTTTTTTTT-->
 </head>
 <body>
@@ -98,12 +99,12 @@
 		</div>
 	</div>
 	<div class="SortBy">
-			<select class="SelectSort">
+			<select class="SelectSort" onchange ="filterBy(this)">
 						<option>Sắp xếp theo</option>
-						<option>A-Z</option>
-						<option>Z-A</option>
-						<option>Giá tăng dần</option>
-						<option>Giá giảm dần</option>
+						<option value="atoz">A-Z</option>
+						<option value="ztoa">Z-A</option>
+						<option value="ascending">Giá tăng dần</option>
+						<option value="descending">Giá giảm dần</option>
 			</select>
 	</div>
 	<div class="products">

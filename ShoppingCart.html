@@ -11,7 +11,8 @@
 	<script type="text/javascript" src="JS/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="js/sweetalerthanghieu.min.js"></script>
 	<script type="text/javascript" src="JS/owl.carousel.min.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/shoppingcart.js"></script>
 	<!--END OF JAVASCRIPTTTTTTTTTTTTTTTTT-->	
 </head>
 <body>
@@ -79,7 +80,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -96,7 +97,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -113,7 +114,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -130,7 +131,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -147,7 +148,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -164,7 +165,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 		</div>
@@ -174,13 +175,13 @@
 					<b>Khuyến mãi</b>
 					<hr>
 					<p>Nhập mã để áp dụng cho đơn hàng này</p>
-					<input type="text"  placeholder="Nhập tại đây..">
-					<button>Xác nhận</button>
+					<input type="text"  placeholder="Nhập tại đây.." id="coupon">
+					<button onclick="KhuyenMai()">Xác nhận</button>
 				</div>
 			</div>
 			<div class="total">
 				<div class="classtotal">
-					<b>TỔNG TIỀN : $142.00</b>
+					<b id="tonggia">TỔNG TIỀN :</b>
 					<hr>
 				</div>
 				<div class="infortotal">

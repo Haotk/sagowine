@@ -152,3 +152,181 @@ function addToCart(value){
   }
 })
 }
+
+
+
+
+
+/////LOGIN & REGISTER ///////////
+
+
+function validate(ob){
+    var id= ob.id;
+     if (id=="regpwd"){
+      if(ob.value.length < 6){
+       $(ob).parent().children("#warning").text("Độ dài mật khẩu phải lớn hơn 6");   
+        $("#register").prop("disabled",true);   
+     }
+     else { 
+            $("#register").prop("disabled",false);
+            $(ob).parent().children("#warning").text("");   
+          }
+}
+    if(id=="repwd"){
+      if(ob.value != $("#regpwd").val()){
+          $(ob).parent().children("#warning").text("Mật khẩu không trùng khớp"); 
+          $("#register").prop("disabled",true);     
+      }
+      else{
+        $("#register").prop("disabled",false);
+       $(ob).parent().children("#warning").text("");  
+     }
+    }
+  
+    if(id=="regmail"){
+       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(ob.value)){
+          $(ob).parent().children("#warning").text("Email không hợp lệ");
+          $("#register").prop("disabled",true);   
+        }
+        else{    $("#register").prop("disabled",false);
+          $(ob).parent().children("#warning").text("");
+     
+      }
+    }
+}
+function isValidate(name,user,email,pwd){
+    var count=0;
+    if(name==""){
+       $("#regname").parent().children("#warning").text("Không được bỏ trống");    
+        count++;
+     }else
+            $("#regname").parent().children("#warning").text("");
+
+    if(user==""){
+       $("#reguser").parent().children("#warning").text("Không được bỏ trống");   
+        count++;
+      }
+     
+     else
+            $("#reguser").parent().children("#warning").text("");   
+
+    if(email==""){
+        $("#regmail").parent().children("#warning").text("Không được bỏ trống");   
+      count++;
+     }
+     else
+            $("#regmail").parent().children("#warning").text("");   
+
+    if(pwd==""){
+       $("#regpwd").parent().children("#warning").text("Không được bỏ trống");   
+      count++;
+     }
+     else
+            $("#regpwd").parent().children("#warning").text("");   
+
+  return count;    
+}
+
+function register(){
+  var name = document.getElementById("regname").value;
+  var user = document.getElementById("reguser").value;
+  var email = document.getElementById("regmail").value;
+  var pwd = document.getElementById("regpwd").value;
+  if(!isValidate(name,user,email,pwd)){
+    var newaccount = {
+      username:user,
+      name:name,
+      email:email,
+      pwd:pwd,
+      status:0,
+    }
+    var accounts = getDataFromLocal(accounts,"user");
+    accounts = !accounts ? [] : accounts;
+      if(accounts.length==0){
+        accounts[0] = newaccount;
+        setDataToLocal(accounts,"user");
+        Swal.fire({
+           title: 'Đăng Ký Thành Công',
+           text:'Mời bạn đăng nhập',
+           icon:'success'})
+        .then(()=> $(".img__btn").click());
+      }
+      else{
+          for(let users of accounts){
+            if(users.username!=newaccount.username && users.email !=newaccount.email){
+                  accounts.push(newaccount);
+                  setDataToLocal(accounts,"user");
+                  swal("Đăng ký thành công!!", "Mời Bạn Đăng Nhập", "success").then(()=> $(".img__btn").click());
+                  break;
+                  }
+                else
+            if(users.username==newaccount.username){
+                  $("#reguser").parent().children("#warning").text("Tài khoản đã được đăng ký."); 
+            }
+            else $("#reguser").parent().children("#warning").text("");
+            if(users.email==newaccount.email){
+                  $("#regmail").parent().children("#warning").text("Email đã được đăng ký"); 
+            }
+                else  $("#regmail").parent().children("#warning").text("");               
+          }
+      }  
+}
+
+}
+
+function isExist(accounts,user,pwd){
+   for(let users of accounts){
+          if(users.username == user && users.pwd == pwd){
+            users.status=1;
+            setDataToLocal(accounts,"user");
+            return 1;
+      }
+     }
+     return 0;
+}
+
+function login(){
+
+  var user = document.getElementById("user").value;
+  var pwd = document.getElementById("pwd").value;
+  var accounts =getDataFromLocal(accounts,"user");
+    if(!accounts){
+        Swal.fire("Đăng nhập thất bại!!", "Sai tài khoản hoặc mật khẩu", "error");
+    }
+  else if(isExist(accounts,user,pwd)) {
+         Swal.fire("Đăng nhập thành công!!", "Chào mừng bạn đến với Sagobo Wines", "success").then(()=> window.location ="Index.html");
+  } 
+    else   Swal.fire("Đăng nhập thất bại!!", "Sai tài khoản hoặc mật khẩu", "error");
+
+}
+
+function logout(){
+  Swal.fire({
+  title: 'Bạn có muốn đăng xuất?',
+  text: "Khi đăng xuất bạn sẽ không thể mua hàng được!!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Có'
+}).then((result) => {
+  if (result.value) {
+    Swal.fire(
+      'Đăng Xuất Thành Công',
+      'Cảm ơn bạn đã mua hàng tại SAGO WINES.',
+      'success'
+    ).then(() =>{
+    var accounts = getDataFromLocal(accounts,"user");
+    for(let account of accounts)
+      if(account.status==1) account.status=0; 
+    
+      setDataToLocal(accounts,"user");
+      window.location ="index.html";
+  })
+  }
+})
+  
+}
+
+////END OF LOGIN & REGISTER //////////
