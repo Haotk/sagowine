@@ -105,7 +105,7 @@ body{
     margin-top: 150px;
 }
 .sub-title-l{
-    color: #3A2F40;
+    color: #EAC47D;
 }
 #sub-slogan{
     font-family:sans-serif;
@@ -125,7 +125,7 @@ body{
     padding-top: 80px;
     float: left;
     width: 50%;
-    background-color: #a87c51;
+    background-color: #c32b25;
 }
 .sub-header-bg-l img{
 
@@ -137,7 +137,7 @@ body{
     text-align: center;
 }
 .title-l p {
-    color: #333333;
+    color: #fff;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -152,7 +152,7 @@ h5 {
     line-height: 1.2;
 }
 .title-l h2 {
-    color: #333333;
+    color: #fff;
     margin-top: 5px;
     margin-bottom: 5px;
     font-family: Montserrat,sans-serif;
@@ -160,7 +160,7 @@ h5 {
     text-transform: uppercase;
 }
 .sub-star-l {
-    color: #333333;
+    color: #fff;
     position: relative;
     display: inline-block;
     margin-bottom: 15px;
@@ -193,7 +193,7 @@ h5 {
 }
 .sub-header-bg-r{
     padding-top: 80px;
-    background: #edc196;
+    background: #ef3b33;
     float: left;
     width: 50%;
 }
@@ -202,7 +202,7 @@ h5 {
     width: 30%!important;
 }
 .title-l .sub-button-r{
-    border: 1px solid #333333;
+    border: 1px solid #fff;
     margin-top: 20px;
     background: none;
 }
@@ -211,7 +211,7 @@ h5 {
     display: inline-block;
     padding: 12px 20px;
     background: #fff;
-    color: #333333;
+    color: #fff;
     font-weight: 500;
     border-radius: 0px;
     font-size: 15px;
@@ -277,13 +277,7 @@ h5 {
     padding-top: 15px;
     padding-bottom: 15px;
 }
-.nav-trending a{
-    color: white;
-    margin-left: 9%;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-}
+
 .nav-trending a:hover{
     color: #EAC47D;
 }
@@ -365,7 +359,7 @@ h5 {
 }
 .special-offer-details{
 
-    background-color: #a87c51!important;
+    background-color: #c32b25!important;
     padding: 100px 30px;
     height: 400px;
     text-align: center;
@@ -382,7 +376,7 @@ h5 {
 .slogan-container{
     width: 100%;
     color: white; 
-    background-color: #dc4c46;
+    background-color: #ef3b33;
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 50px;
@@ -517,6 +511,17 @@ h5 {
     font-family: Verdana, sans-serif;
 
 }
+.items{
+    color: white;
+    margin-left: 9%;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.active{
+     color:#EAC47D;
+}
 .mail-but{
     float:right;
     margin-left: 50px;
@@ -555,4 +560,47 @@ h5 {
   padding: 10px 10px 12px 45px;
   -webkit-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
+}
+
+.autocomplete-items {
+  min-width: 38%;
+  height: 50px;
+  position: absolute;
+  margin-top: 10px;
+  z-index: 99;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: tomato; 
+  color:white;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: tomato !important; 
+  color: white; 
+}
+
+
+
+
+
+.header-icons > span{
+    padding: 4px 6px;
+    line-height: 0.9;
+    display: inline-block;
+    position: absolute;
+    right:6%;
+    font-size: 14px;
+    border-radius: 30px;
+    background: #dc4c46;
+    
 }
