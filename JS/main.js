@@ -1,15 +1,3 @@
-//CONST
-/**GET/SET DATA FROM LOCAL STORAGE**/
-const getDataFromLocal = (data,key) =>{ 
-
-  data = JSON.parse(localStorage.getItem(key));
-  return data==null ? 0 : data; };
-
-
-const setDataToLocal = (data,key) => localStorage.setItem(key,JSON.stringify(data));
-
-
-//END OF CONST
 //AUTOCOMPLETE
 
 function autocomplete(inp, arr) {
@@ -120,35 +108,3 @@ function search(){
 }
 //KET THUC TIM KIEM KIEU 2
 //ENDOFAUTOCOMPLETE
-
-
-function change(value){
-   var item = document.getElementsByClassName("items");
-    
-    for (let i=0;i<item.length;i++){
-
-       item[i].className = item[i].className.replace(" active", "");
-    }
-    item[value].className += " active";
-}
-
-function addToCart(value){
- Swal.fire({
-  title: 'Thêm vào giỏ?',
-  icon: 'question',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Có',
-  cancelButtonText: 'Không',
-}).then((result) => {
-  if (result.value) {
-    Swal.fire(
-      'Thêm thành công',
-      '',
-      'success'
-    )
-    document.getElementById(`soluong`).innerText = parseInt(document.getElementById(`soluong`).innerText)+1;
-  }
-})
-}

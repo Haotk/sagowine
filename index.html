@@ -11,7 +11,9 @@
 
 	<!--JAVSCRIPTTTTTTTTTTTTTTTTTTTTTTT--->
 	<script type="text/javascript" src="JS/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/sweetalerthanghieu.min.js"></script>
 	<script type="text/javascript" src="JS/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 	<!--END OF JAVASCRIPTTTTTTTTTTTTTTTTT-->
 </head>
 <body style="background-color: #131313;">
@@ -21,18 +23,22 @@
 	</div>
 		<div class="header-search">
 		
-  			<form class="search-container">
-    			<input type="text" name="search" placeholder="Tìm kiếm...">
-  			</form>
+  			 <div class="search-container">
+      <div class="autocomplete">
+      <input id="suggest"class="search-box" type="text" placeholder="Tìm kiếm..." >
+    </div>
+     
+    </div>
 	</div>
 	<div class="header-details">
 		<a href="index.html">TRANG CHỦ</a>
 		<a href="about.html">GIỚI THIỆU</a>
-		<a href="product.html">SẢN PHẨM</a>
+		<a href="products.html">SẢN PHẨM</a>
 	</div>
 	<div class="header-icons">
 		<a><i class="fa fa-user"></i></a>
-		<a href="shopping.htm"><i class="fa fa-shopping-bag" ></i></a>
+		<a href="ShoppingCart.html"><i class="fa fa-shopping-bag" ></i></a>
+		<span id="soluong">0</span>
 	</div>
 </div>
 
@@ -72,7 +78,7 @@
 								<i class="fa fa-star"></i>								
 							</p>
 
-							<p style="color: white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+							<p style="color: white">Khám phá những loại Vang Trắng thịnh hành nhất</p>
 								<a href="#" class="sub-button-l">Xem thêm</a>
 							</div>
 			</div>
@@ -90,7 +96,7 @@
 								<i class="fa fa-star"></i>								
 							</p>
 							
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+							<p>Khám phá những loại Vang Đỏ nổi tiếng nhất</p>
 								<a href="#" class="sub-button-r">Xem thêm</a>
 					</div>
 			</div>
@@ -100,7 +106,7 @@
 	<div class="body-container">
 		<div class="titlecontainer">
 					<h5 class="container-title">sago wine</h5>
-					<h2>Our product<br></h2>
+					<h2>Sản Phẩm<br></h2>
 					<hr class="hr-1">
 					<p class="line-mix line-mix-f star-group">
 						<i class="fa fa-star"></i>
@@ -112,9 +118,9 @@
 		<div class="trending">
 			<div class="nav-trending">
 	
-				<a href="#">MUA NHIỀU NHẤT</a>
-				<a href="#">NỔI BẬT</a>
-				<a href="#">XEM NHIỀU NHẤT</a>
+				<a onclick="change(0)" class="items">MUA NHIỀU NHẤT</a>
+				<a onclick="change(1)" class="items">NỔI BẬT</a>
+				<a onclick="change(2)" class="items">XEM NHIỀU NHẤT</a>
 				
 			</div>
 			<div class="product-trending">
@@ -125,7 +131,7 @@
 							<h3 class="heading"><a>Sauvignon Blanc</a></h3>
 							<p class="price-trending">$200,00</p>
 							<p>Lorem ipsum dolor sit amet consectetur adipi</p>
-							<a href="#" class="button-trending">Thêm vào giỏ hàng</a>
+							<a style="cursor:pointer" class="button-trending" onclick="addToCart(this)">Thêm vào giỏ hàng</a>
 							<br>
 							</div>
 						</div>
@@ -137,7 +143,7 @@
 							<h3 class="heading"><a>Sauvignon Blanc</a></h3>
 							<p class="price-trending">$200,00</p>
 							<p>Lorem ipsum dolor sit amet consectetur adipi</p>
-							<a href="#" class="button-trending">Thêm vào giỏ hàng</a>
+							<a style="cursor:pointer" class="button-trending" onclick="addToCart(this)">Thêm vào giỏ hàng</a>
 							<br>
 							</div>
 						</div>
@@ -149,7 +155,7 @@
 							<h3 class="heading"><a>Sauvignon Blanc</a></h3>
 							<p class="price-trending">$200,00</p>
 							<p>Lorem ipsum dolor sit amet consectetur adipi</p>
-							<a href="#" class="button-trending">Thêm vào giỏ hàng</a>
+							<a style="cursor:pointer" class="button-trending" onclick="addToCart(this)">Thêm vào giỏ hàng</a>
 							<br>
 							</div>
 						</div>
@@ -161,7 +167,7 @@
 							<h3 class="heading"><a>Sauvignon Blanc</a></h3>
 							<p class="price-trending">$200,00</p>
 							<p>Lorem ipsum dolor sit amet consectetur adipi</p>
-							<a href="#" class="button-trending">Thêm vào giỏ hàng</a>
+							<a style="cursor:pointer" class="button-trending" onclick="addToCart(this)">Thêm vào giỏ hàng</a>
 							<br>
 							</div>
 						</div>
@@ -240,6 +246,7 @@
                 autoplayTimeout: 5000,
                 autoplay: true,
               })});
+		  autocomplete(document.getElementById("suggest"), countries)
 </script>
 
 
