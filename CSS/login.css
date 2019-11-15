@@ -245,14 +245,7 @@ body {
           transform: translateY(72px);
 }
 
-h2 {
-    box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-size: 26px;
-  text-align: center;
-}
+
 
 .label{
     box-sizing: border-box;
@@ -308,7 +301,15 @@ h2 {
   margin-top: 15%;
   transition-timing-function: ease-out;
 }
-.sign-in,.sign-up h2{
+.sign-in>h2,.sign-up >h2{
+
+    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+
   color: #DC4C46;
   font-family: Marcellus,sans-serif;
 }

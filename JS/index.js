@@ -7,7 +7,7 @@ const getDataFromLocal = (data,key) =>{
 
 
 const setDataToLocal = (data,key) => localStorage.setItem(key,JSON.stringify(data));
-
+const isNumeric = /^\d+$/;
 
 //END OF CONST
 //AUTOCOMPLETE
@@ -110,8 +110,8 @@ function autocomplete(inp, arr) {
 }
 
 /*An array containing all the country names in the world:*/
-var countries = getDataFromLocal(countries,"sanpham")//TIM KIEM KIEU 2
-countries = countries.map(country => country.tensach);
+var wines = getDataFromLocal(wines,"sanpham")//TIM KIEM KIEU 2
+wines = wines.map(wine => wine.tensach);
 function search(){
   var content ="Search.html?"+document.getElementById("suggest").value.split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
 
@@ -158,6 +158,28 @@ function addToCart(value){
 
 
 /////LOGIN & REGISTER ///////////
+function isLogged(){
+  var login = $(".fa-user").parent();
+  var accounts = getDataFromLocal(accounts,'user');
+  var icon = login.children();
+  console.log(icon);
+  accounts = !accounts ? [] : accounts;
+  var user = accounts.find(users => users.status==1);
+    if( accounts.status==`undefined` ||typeof user==`undefined`)  { 
+      login.attr("href","login.html");
+      login.children().attr("title","Mời bạn đăng nhập");
+      return 0;
+    }
+    else{
+      login.removeAttr("href");
+      icon.text(" "+user.name);
+      login.children().attr("title","Chào bạn "+user.name);
+
+    }
+    return 1;
+  }
+
+window.addEventListener("load",isLogged);
 
 
 function validate(ob){
@@ -292,7 +314,7 @@ function login(){
   var pwd = document.getElementById("pwd").value;
   var accounts =getDataFromLocal(accounts,"user");
     if(!accounts){
-        Swal.fire("Đăng nhập thất bại!!", "Sai tài khoản hoặc mật khẩu", "error");
+        Swal.fire("Đăng nhập thất bại!!","Sai tài khoản hoặc mật khẩu","error");
     }
   else if(isExist(accounts,user,pwd)) {
          Swal.fire("Đăng nhập thành công!!", "Chào mừng bạn đến với Sagobo Wines", "success").then(()=> window.location ="Index.html");
