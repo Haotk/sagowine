@@ -40,6 +40,7 @@ body{
 	margin-top: 2%;
 }
 .set-star{
+	color: #333333;
 	width: 10%;
 	float: left;
 	margin-top: -1.5%;
@@ -51,8 +52,7 @@ body{
 	margin-bottom: 5px;
 }
 #product-details{
-	font-family:;
-	color: black;
+	color: #333333;
 	font-weight: bold;
 	font-size: 50px;
 	margin-top: 5px;
@@ -72,6 +72,7 @@ body{
 	width: 100%;
 }
 .frame-details{
+	padding: 10px;
 	border-radius: 2px;
 	margin-right: 5%;
 	background-color: white;
@@ -121,7 +122,10 @@ body{
 
 }
 .searchml select{
-	width: 60%;
+	outline: none;
+	border:1px solid #eee;
+	padding: 0px 10px;
+	width: 83%;
 	height: 30px;
 }
 .concentration {
@@ -212,6 +216,7 @@ body{
 	height: 48px;
 	font-weight: 500;
 	border-radius: 5px;
+	outline: none;
 	padding: 5px;
 	background-color: #dc4c46;
 	border:1px solid white;
@@ -299,6 +304,7 @@ body{
 	background-color: #555555;
 	border:1px solid white;
 	color: #fff;
+	outline: none;
 	border-radius: 5px;
 	font-size: 15px;
 	cursor: pointer;

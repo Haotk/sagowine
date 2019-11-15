@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Shopping Cart</title>
+	<title>GIỎ HÀNG</title>
 	<link rel="stylesheet" type="text/css" href="css/shoppingcart.css">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-
+	<!--JAVSCRIPTTTTTTTTTTTTTTTTTTTTTTT--->
+	<script type="text/javascript" src="JS/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/sweetalerthanghieu.min.js"></script>
+	<script type="text/javascript" src="JS/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/shoppingcart.js"></script>
+	<!--END OF JAVASCRIPTTTTTTTTTTTTTTTTT-->	
 </head>
 <body>
 <div class="header">
@@ -16,9 +22,12 @@
 	</div>
 		<div class="header-search">
 		
-  			<form class="search-container">
-    			<input type="text" name="search" placeholder="Tìm kiếm...">
-  			</form>
+  			 <div class="search-container">
+      <div class="autocomplete">
+      <input id="suggest"class="search-box" type="text" placeholder="Tìm kiếm..." >
+    </div>
+     
+    </div>
 	</div>
 	<div class="header-details">
 		<a href="index.html">TRANG CHỦ</a>
@@ -26,8 +35,9 @@
 		<a href="products.html">SẢN PHẨM</a>
 	</div>
 	<div class="header-icons">
-		<a><i class="fa fa-user"></i></a>
-		<a href="shoppingcart.html"><i class="fa fa-shopping-bag" ></i></a>
+		<a><i class="fa fa-user" title="Tài khoản" style="cursor: pointer;"></i></a>
+		<a href="ShoppingCart.html"><i title="Giỏ hàng"class="fa fa-shopping-bag" ></i></a>
+		<span id="soluong">0</span>
 	</div>
 </div>
 <!--End Headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
@@ -70,7 +80,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -87,7 +97,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -104,7 +114,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -121,7 +131,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -138,7 +148,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 			<div class="inforproduct">
@@ -155,7 +165,7 @@
 					<b>$120.00</b>
 				</div>
 				<div class="removeproduct">
-					<i class="fa fa-remove"></i>
+					<i class="fa fa-remove" onclick="removed(this)"></i>
 				</div>
 			</div>
 		</div>
@@ -165,13 +175,13 @@
 					<b>Khuyến mãi</b>
 					<hr>
 					<p>Nhập mã để áp dụng cho đơn hàng này</p>
-					<input type="text"  placeholder="Nhập tại đây..">
-					<button>Xác nhận</button>
+					<input type="text"  placeholder="Nhập tại đây.." id="coupon">
+					<button onclick="KhuyenMai()">Xác nhận</button>
 				</div>
 			</div>
 			<div class="total">
 				<div class="classtotal">
-					<b>TỔNG TIỀN : $142.00</b>
+					<b id="tonggia">TỔNG TIỀN :</b>
 					<hr>
 				</div>
 				<div class="infortotal">
@@ -263,5 +273,8 @@
 			<p>2019 Designed by Group. All rights reserved</p>
 		</div>	
 </div>	
+<script type="text/javascript">
+			  autocomplete(document.getElementById("suggest"), countries)
+</script>
 </body>
 </html>

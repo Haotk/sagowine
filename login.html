@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CHI TIẾT SẢN PHẨM</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<!--JAVSCRIPTTTTTTTTTTTTTTTTTTTTTTT--->
+	<script type="text/javascript" src="JS/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/sweetalerthanghieu.min.js"></script>
+	<script type="text/javascript" src="JS/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	<!--END OF JAVASCRIPTTTTTTTTTTTTTTTTT-->
+</head>
+<body>
+<div class="header">
+	<div class="header-logo">
+		<a href=""><img src="images/logo.png"></a>
+	</div>
+		<div class="header-search">
+		
+  			 <div class="search-container">
+      <div class="autocomplete">
+      <input id="suggest"class="search-box" type="text" placeholder="Tìm kiếm..." >
+    </div>
+     
+    </div>
+	</div>
+	<div class="header-details">
+		<a href="index.html">TRANG CHỦ</a>
+		<a href="about.html">GIỚI THIỆU</a>
+		<a href="products.html">SẢN PHẨM</a>
+	</div>
+	<div class="header-icons">
+		<a href="login.html"><i class="fa fa-user" title="Tài khoản" style="cursor: pointer;"></i></a>
+		<a href="ShoppingCart.html"><i title="Giỏ hàng"class="fa fa-shopping-bag" ></i></a>
+		<span id="soluong">0</span>
+	</div>
+</div>
+<!--End Headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
+<div class="cont">
+    <!--Phần đăng nhập-->
+  <div class="form sign-in">
+    <h2>ĐĂNG NHẬP</h2>
+    <label class="label">
+      <span>Tài khoản</span>
+      <input class ="input"   id="user"/>
+               <label class="warning" id="warning"></label>
+    </label>
+    <label class="label">
+      <span>Mật khẩu</span>
+      <input class ="input" type="password" id="pwd"/>
+               <label class="warning" id="warning"></label>
+    </label>
+    
+    <button class="btn submit" type="button" onclick="login()">Đăng nhập</button>
+
+  </div>
+  <div class="sub-cont">
+    <!--Phần content phụ( bay qua bay lại )-->
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>ĐĂNG KÝ</h2>
+        <p>Tham gia ngay để nhận những ưu đãi đặc biệt từ SAGOWINE !</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>Đã có tài khoản?</h2>
+        <p>Mời bạn đăng nhập !</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Đăng ký</span>
+        <span class="m--in">Đăng nhập</span>
+      </div>
+    </div>
+    <!--Phần đăng kí-->
+    <div class="form sign-up">
+      <h2>ĐĂNG KÝ</h2>
+      <label class="label">
+        <span>Họ Tên</span>
+        <input class ="input" type="text" placeholder="Nhập Họ và Tên"/ id="regname">
+         <label class="warning" id="warning"></label>
+      </label>
+       <label class="label">
+        <span>Email</span>
+        <input class ="input" type="text" placeholder="Nhập Email"/ id="regmail" onchange="validate(this)">
+         <label class="warning" id="warning"></label>
+      </label>
+      <label class="label">
+        <span>TÀI KHOẢN</span>
+        <input class ="input" placeholder="Nhập tài khoản"/ id="reguser" >
+                 <label class="warning" id="warning"></label>
+
+      </label>
+      <label class="label">
+        <span>Mật khẩu</span>
+        <input class ="input" type="password" placeholder="Mật khẩu từ 6 đến 32 ký tự"/ id="regpwd" onchange="validate(this)">
+                 <label class="warning" id="warning"></label>
+
+      </label>
+      <label class="label">
+        <span>Nhập lại Mật khẩu</span>
+        <input class ="input" type="password" placeholder="Nhập lại mật khẩu"/ id ="repwd" onchange="validate(this)">
+                 <label class="warning" id="warning"></label>
+
+      </label>
+      <button class="btn submit" id="register" type="button" onclick="register()">Đăng kí</button>
+    </div>
+  </div>
+</div>
+
+
+<!--footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
+<div class="footer">
+	<div class="footer-top">
+			<div class="footer-logo">
+				<a href="#"><img src="images/logo-footer.png" alt="logo"></a>
+			</div>
+			<div class="footer-cont">
+				<div class="information">
+					<h4>Thông tin</h4>
+					<a href="#">Chính Sách</a>
+					<br>
+					<a href="#">Trung Tâm Trợ Giúp
+</a>		
+					<br>			
+					<a href="#">Liên Hệ Quảng Cáo</a>
+					<br>
+					<a href="#">Điều Khoản Dịch Vụ</a>
+				</div>
+				<div class="wineshop">
+					<h4>Wine Shop</h4>
+					<a href="#">Red wine</a>
+					<br>
+					<a href="#">Rose wine</a>
+					<br>
+					<a href="#">White wine</a>
+					<br>
+					<a href="#">Champagne</a>
+				</div>
+				<div class="link">
+					<h4>Trang Khác</h4>
+					<a href="#">Nổi Bật</a>
+					<br>
+					<a href="#">Chi Nhánh</a>
+					<br>	
+					<a href="#">Thương Hiệu</a>
+					<br>
+					<a href="#">Phiếu Quà Tặng</a>
+				</div>
+				<div class="mail">
+						<h4>Tham gia với chúng tôi</h4>
+						<form>
+							<div class="mail-box">	
+								<input type="text" placeholder="Nhập email tại đây..">
+							</div>
+							<div class="mail-but">
+								<button>GỬI</button>
+							</div>
+						</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bot">
+			<p>2019 Designed by Group. All rights reserved</p>
+		</div>	
+</div>	
+
+
+<script>
+
+document.querySelector('.img__btn').addEventListener('click', function() {
+    document.querySelector('.cont').classList.toggle('s--signup');
+  });
+			  autocomplete(document.getElementById("suggest"), countries)
+
+
+	
+</script>
+</body>
+</html>

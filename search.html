@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TÌM KIẾM</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--JAVSCRIPTTTTTTTTTTTTTTTTTTTTTTT--->
+	<script type="text/javascript" src="JS/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/sweetalerthanghieu.min.js"></script>
+	<script type="text/javascript" src="JS/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	<!--END OF JAVASCRIPTTTTTTTTTTTTTTTTT-->
+</head>
+<body>
+<div class="header">
+	<div class="header-logo">
+		<a href=""><img src="images/logo.png"></a>
+	</div>
+		<div class="header-search">
+		
+  			 <div class="search-container">
+      <div class="autocomplete">
+      <input id="suggest"class="search-box" type="text" placeholder="Tìm kiếm..." >
+    </div>
+     
+    </div>
+	</div>
+	<div class="header-details">
+		<a href="index.html">TRANG CHỦ</a>
+		<a href="about.html">GIỚI THIỆU</a>
+		<a href="products.html">SẢN PHẨM</a>
+	</div>
+	<div class="header-icons">
+		<a href="login.html"><i class="fa fa-user" title="Tài khoản" style="cursor: pointer;"></i></a>
+		<a href="ShoppingCart.html"><i title="Giỏ hàng"class="fa fa-shopping-bag" ></i></a>
+		<span id="soluong">0</span>
+	</div>
+</div>
+	<div class="main-products-detail">
+		<div class="tittledetails">
+			<br>
+			<p id="royalwine" style="font-family: Cinzel,serif">SAGO WINE</p>
+			<p id="product-details" style="font-family: Monserrat,sans-serif">TÌM KIẾM</p>
+			<div class="main-star">
+				<div id="hr-star">
+					<hr style="border-top:1px solid #5d6860;">
+				</div>
+				<div class="set-star">
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star fa-2x" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+				</div>
+				<div id="hr-star2">
+					<hr style="border-top:1px solid #5d6860;">
+				</div>
+			</div>
+			<hr style="border-top: 4px double #999;">
+		</div>
+	</div>
+<div class="main">
+	
+	<div class="categoriesNsreach">
+			<div class="result">
+				<b>Kết quả tìm kiếm: </b>
+			</div>
+		<div class="frameofcategoriesNsreach">
+			<div class="TextInCategoriesNSreach">
+				<div><b style="font-size: 25px">Tìm kiếm</b></div>
+				<hr width="30%" align="left">
+				<div class="searchbox">
+ 					 <input type="text" name="search" placeholder="Từ khóa....">
+				</div>
+				<hr width="30%" align="left">
+				<div><b style="font-size: 25px">Tìm theo giá</b></div>
+				<div class="searchprice">
+					<ul>
+  						<li><a href="#whitewine">100.000 - 300.000</a></li>
+  						<li><a href="#whitewine">300.000 - 600.000</a></li>
+  						<li><a href="#redwine">600.000 - 1.000.000</a></li>
+ 						<li><input type="" name="" class="FromTo" id="min">-<input type="" name="" class="FromTo" id="max"><button class="filter" onclick="filterPrice()">Lọc</button></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="SortBy">
+			<select class="SelectSort">
+						<option>Sắp xếp theo</option>
+						<option>A-Z</option>
+						<option>Z-A</option>
+						<option>Giá tăng dần</option>
+						<option>Giá giảm dần</option>
+			</select>
+	</div>
+	<div class="products">
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Alicanto Tradicion Merlot.jpg" alt="wine1">
+			<div>
+				<div class="products-name">Alicanto Tradicion Merlot</div>
+				<div class="products-price">200.000 VNĐ</div>
+				<div class="products-little-detail">750ml | 14%</div>
+				<button class="button-add-to-cart">Thêm vào giỏ</button>
+			</div>
+		</div>
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Buccella Cabernet Sauvignon.jpg" alt="wine2">
+			<div class="products-name">Buccella Cabernet Sauvignon</div>
+			<div class="products-price">6.900.000 VNĐ</div>
+			<div class="products-little-detail">750ml | 14.6%</div>
+			<button class="button-add-to-cart">Thêm vào giỏ</button>
+		</div>
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Crocus Le Calcifere.jpg" alt="wine3">
+			<div class="products-name">Crocus Le Calcifere</div>
+			<div class="products-price">980.000 VNĐ</div>
+			<div class="products-little-detail">750ml | 14.5%</div>
+			<button class="button-add-to-cart">Thêm vào giỏ</button>
+		</div>
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Chateau Canon La Gaffeliere.jpg" alt="wine4">
+			<div class="products-name">Chateau Canon La Gaffeliere</div>
+			<div class="products-price">5.000.000 VNĐ</div>
+			<div class="products-little-detail">750ml | 13.5%</div>
+			<button class="button-add-to-cart">Thêm vào giỏ</button>
+		</div>
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Chateau D'armailhac.jpg" alt="wine5">
+			<div class="products-name">Chateau D'armailhac</div>
+			<div class="products-price">3.800.000 VNĐ</div>
+			<div class="products-little-detail">750ml | 13.5%</div>
+			<button class="button-add-to-cart">Thêm vào giỏ</button>
+		</div>
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Chateau D'issan.jpg" alt="wine6">
+			<div class="products-name">Chateau D'issan</div>
+			<div class="products-price">4.200.000 VNĐ</div>
+			<div class="products-little-detail">750ml | 13.7%</div>
+			<button class="button-add-to-cart">Thêm vào giỏ</button>
+		</div>
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Chateau Palmer.jpg" alt="wine7">
+			<div class="products-name">Chateau Palmer</div>
+			<div class="products-price">17.300.000 VNĐ</div>
+			<div class="products-little-detail">750ml | 13%</div>
+			<button class="button-add-to-cart">Thêm vào giỏ</button>
+		</div>
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Chile G7 Cabernet Sauvignon.jpg" alt="wine8">
+			<div class="products-name">Chile G7 Cabernet Sauvignon</div>
+			<div class="products-price">180.000 VNĐ</div>
+			<div class="products-little-detail">750ml | 13%</div>
+			<button class="button-add-to-cart">Thêm vào giỏ</button>
+		</div>
+		<div class="frameofproducts">
+			<img src="images/Rượu Vang Errazuriz Max Reserva Caberet Sauvignon.jpg" alt="wine9">
+			<div class="products-name">Errazuriz Max Reserva Caberet Sauvignon</div>
+			<div class="products-price">660.000 VNĐ</div>
+			<div class="products-little-detail">750ml | 13.5%</div>
+			<button class="button-add-to-cart">Thêm vào giỏ</button>
+		</div>
+		<div><br></div>
+		<div class="pagination">
+ 			<b href="#">&laquo;</b>
+ 			<b href="#">&lt;</b>
+  			<b href="#"class="firstpage">1</b>
+ 			<b href="#">2</b>
+ 			<b href="#">3</b>
+ 			<b href="#">&gt;</b>
+ 			<b href="#">&raquo;</b>
+		</div>
+	</div>
+	<div class="clearspace"></div>
+</div>
+<div class="footer">
+	<div class="footer-top">
+			<div class="footer-logo">
+				<a href="#"><img src="images/logo-footer.png" alt="logo"></a>
+			</div>
+			<div class="footer-cont">
+				<div class="information">
+					<h4>Thông tin</h4>
+					<a href="#">Chính Sách</a>
+					<br>
+					<a href="#">Trung Tâm Trợ Giúp
+</a>		
+					<br>			
+					<a href="#">Liên Hệ Quảng Cáo</a>
+					<br>
+					<a href="#">Điều Khoản Dịch Vụ</a>
+				</div>
+				<div class="wineshop">
+					<h4>Wine Shop</h4>
+					<a href="#">Red wine</a>
+					<br>
+					<a href="#">Rose wine</a>
+					<br>
+					<a href="#">White wine</a>
+					<br>
+					<a href="#">Champagne</a>
+				</div>
+				<div class="link">
+					<h4>Trang Khác</h4>
+					<a href="#">Nổi Bật</a>
+					<br>
+					<a href="#">Chi Nhánh</a>
+					<br>	
+					<a href="#">Thương Hiệu</a>
+					<br>
+					<a href="#">Phiếu Quà Tặng</a>
+				</div>
+				<div class="mail">
+						<h4>Tham gia với chúng tôi</h4>
+						<form>
+							<div class="mail-box">	
+								<input type="text" placeholder="Nhập email tại đây..">
+							</div>
+							<div class="mail-but">
+								<button>GỬI</button>
+							</div>
+						</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bot">
+			<p>2019 Designed by Group. All rights reserved</p>
+		</div>	
+</div>	
+<script type="text/javascript">
+			  autocomplete(document.getElementById("suggest"), countries)
+</script>
+</body>
+</html>

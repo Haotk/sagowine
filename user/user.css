@@ -151,7 +151,11 @@ body{
 }
 .bill-code{
 	float: left;
+<<<<<<< HEAD
 	width: 15%;
+=======
+	width: 10%;
+>>>>>>> f84e3b1c7a61904294d42a8f1f1ad51787a8a414
 	margin-left:1%;
 }
 .bill-date{
@@ -165,7 +169,11 @@ body{
 }
 .bill-status{
 	float: left;
+<<<<<<< HEAD
 	width: 20%;
+=======
+	width: 28%;
+>>>>>>> f84e3b1c7a61904294d42a8f1f1ad51787a8a414
 }
 
 

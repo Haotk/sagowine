@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>INDEX</title>
-	<title>Royal wine</title>
+	<title>PHÂN LOẠI SẢN PHẨM</title>
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/phantrangruou.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--JAVSCRIPTTTTTTTTTTTTTTTTTTTTTTT--->
+	<script type="text/javascript" src="JS/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/sweetalerthanghieu.min.js"></script>
+	<script type="text/javascript" src="JS/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/pagination.js"></script>
+	<!--END OF JAVASCRIPTTTTTTTTTTTTTTTTT-->
 </head>
 <body>
 <div class="header">
@@ -14,9 +20,12 @@
 	</div>
 		<div class="header-search">
 		
-  			<form class="search-container">
-    			<input type="text" name="search" placeholder="Tìm kiếm...">
-  			</form>
+  			 <div class="search-container">
+      <div class="autocomplete">
+      <input id="suggest"class="search-box" type="text" placeholder="Tìm kiếm..." >
+    </div>
+     
+    </div>
 	</div>
 	<div class="header-details">
 		<a href="index.html">TRANG CHỦ</a>
@@ -24,8 +33,9 @@
 		<a href="products.html">SẢN PHẨM</a>
 	</div>
 	<div class="header-icons">
-		<a><i class="fa fa-user"></i></a>
-		<a href="shoppingcart.html"><i class="fa fa-shopping-bag" ></i></a>
+		<a href="login.html"><i class="fa fa-user" title="Tài khoản" style="cursor: pointer;"></i></a>
+		<a href="ShoppingCart.html"><i title="Giỏ hàng"class="fa fa-shopping-bag" ></i></a>
+		<span id="soluong">0</span>
 	</div>
 </div>
 	<div class="main-products-detail">
@@ -56,10 +66,23 @@
 				<div><b class="TextInCategoriesNSreach" style="font-size: 25px">Loại rượu</b></div>
 				<hr width="30%" align="left">
 				<ul>
-  					<li><a href="#whitewine">White Wine</a></li>
-  					<li><a href="#redwine">Red Wine</a></li>
-  					<li><a href="#rosewine">Rose Wine</a></li>
- 					<li><a href="#champane">Champagne</a></li>
+  					<li><a onclick="loadData(`White Wine`,0)" class="Wines">White Wine</a></li>
+  					<li><a onclick="loadData(`Red Wine`,1)" class="Wines">Red Wine</a></li>
+  					<li><a onclick="loadData(`Rose Wine`,2)" class="Wines">Rose Wine</a></li>
+ 					<li><a onclick="loadData(`Champagne`,3)" class="Wines">Champagne</a></li>
+				</ul>
+			</div>		
+		</div>
+		<br>
+			<div class="frameofcategoriesNsreach">
+			<div class="TextInCategoriesNSreach">
+				<div><b class="TextInCategoriesNSreach" style="font-size: 25px">Theo Giá</b></div>
+				<hr width="30%" align="left">
+				<ul>
+  					<li><a href="#whitewine">100.000 - 300.000</a></li>
+  					<li><a href="#whitewine">300.000 - 600.000</a></li>
+  					<li><a href="#redwine">600.000 - 1.000.000</a></li>
+ 					<li><input type="" name="" class="FromTo" id="min">-<input type="" name="" class="FromTo" id="max"><button class="filter" onclick="filterPrice()">Lọc</button></li>
 				</ul>
 			</div>		
 		</div>
@@ -68,20 +91,20 @@
 			<div class="TextInCategoriesNSreach">
 				<div><b style="font-size: 25px">Tìm kiếm</b></div>
 				<hr width="30%" align="left">
-				<form class="searchbox">
+				<div class="searchbox">
  					 <input type="text" name="search" placeholder="Từ khóa....">
-				</form>
+				</div>
 				
 			</div>
 		</div>
 	</div>
 	<div class="SortBy">
-			<select class="SelectSort">
+			<select class="SelectSort" onchange ="filterBy(this)">
 						<option>Sắp xếp theo</option>
-						<option>A-Z</option>
-						<option>Z-A</option>
-						<option>Giá tăng dần</option>
-						<option>Giá giảm dần</option>
+						<option value="atoz">A-Z</option>
+						<option value="ztoa">Z-A</option>
+						<option value="ascending">Giá tăng dần</option>
+						<option value="descending">Giá giảm dần</option>
 			</select>
 	</div>
 	<div class="products">
@@ -217,5 +240,8 @@
 			<p>2019 Designed by Group. All rights reserved</p>
 		</div>	
 </div>	
+<script type="text/javascript">
+			  autocomplete(document.getElementById("suggest"), countries)
+</script>
 </body>
 </html>

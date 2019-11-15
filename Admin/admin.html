@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="wrapper">
+    <div class="header">
+        <img src="Sagowi.png">
+    </div>
+    <div class="tab">
+      <button class="tablinks" title="Đăng xuất" onclick="openCity(event, 'Logout')"><i class="fa fa-power-off"></i></button>
+      <button class="tablinks" title="Trang chủ" onclick="openCity(event, 'Info')"><i class="fa fa-home"></i></button>
+      <button class="tablinks" title="Thống kê" onclick="openCity(event, 'Chart')"id="defaultOpen"><i class="fa fa-bar-chart"></i></button>
+      <button class="tablinks" title="Sản phẩm" onclick="openCity(event, 'Product')"><i class="fa fa-cubes"></i></button>
+      <button class="tablinks" title="Khách hàng" onclick="openCity(event, 'Customers')"><i class="fa fa-user"></i></button>
+      <button class="tablinks" title="Hóa đơn" onclick="openCity(event, 'Billing')"><i class="fa fa-file-text-o"></i></button>
+    </div>
+    <div class="searchbar">
+      <button><i class="fa fa-search"></i></button>
+      <input type="text" name="" placeholder="Tìm kiếm...">
+    </div>
+    <div id="Logout" class="tabcontent">
+      <p style="font-size: 24px"><i class="fa fa-spinner fa-spin" style="font-size:24px"></i> Đang đăng xuất </p> 
+      
+    </div>
+    <div id="Info" class="tabcontent">
+      <h3 style="color: Red">Quản trị viên</h3>
+      <p>Chào mừng trở lại, quản trị viên 01</p>
+      <h4>Quản lí: </h4>
+      <div class="manager">
+        <div class="user">
+          <span>
+            <i class="fa fa-circle" id="online"></i>  
+            <span class="user-name">Kế toán 01</span> 
+            <button title="Gửi tin nhắn"><i class="fa fa-envelope-o"></i></button>
+            <button title="Thông tin"><i class="fa fa-info"></i></button></span>          
+        </div> 
+        <div class="user">
+          <span>
+            <i class="fa fa-circle" id="offline"></i>  
+            <span class="user-name">Kế toán 02</span> 
+            <button title="Gửi tin nhắn"><i class="fa fa-envelope-o"></i></button>
+            <button title="Thông tin"><i class="fa fa-info"></i></button></span>          
+        </div> 
+        <div class="user">
+          <span>
+            <i class="fa fa-circle" id="offline"></i>  
+            <span class="user-name">Quản trị viên 02</span> 
+            <button title="Gửi tin nhắn"><i class="fa fa-envelope-o"></i></button>
+            <button title="Thông tin"><i class="fa fa-info"></i></button></span>          
+        </div>   
+        <div class="user">
+          <span>
+            <i class="fa fa-circle" id="online"></i>  <span class="user-name">Kho 01</span> 
+            <button title="Gửi tin nhắn"><i class="fa fa-envelope-o"></i></button>
+            <button title="Thông tin"><i class="fa fa-info"></i></button></span>          
+        </div>       
+      </div>
+    </div>
+    <div id="Chart" class="tabcontent">
+        <div class="text-chart">
+          <h2>Tổng thu nhập tháng <span class="month">11</span> : <span class="cash">254.850.000</span> VND</h2>
+          <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              <strong>Chú ý!</strong> Số lượng <span>Rượu hoa hồng</span> còn lại dưới 10 sản phẩm. 
+          </div>
+          <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              <strong>Chú ý!</strong> Số lượng <span>Rượu Volka</span> còn lại dưới 10 sản phẩm. 
+          </div>
+          <div class="alert info">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              <strong>Lưu ý!</strong> <span>Kế toán 05</span> yêu cầu nhập <span>20</span> <span>chai</span> <span>Volka</span>. 
+          </div>
+          <div class="alert success">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              <strong>Thông báo!</strong> Giao dịch đơn hàng <span>MD781</span> hoàn tất. 
+          </div>
+        </div>
+        <div class="circle-chart">
+          <div id="piechart"></div>
+        </div>
+    </div>
+    <div id="Product" class="tabcontent">
+    	<div class="setting">
+    		<div class="sort">
+    			<button title="Danh sách"><i class="fa fa-list"></i></button>
+    			<button title="Lưới"><i class="fa fa-th-large"></i></button>
+    		</div>
+    		<div class="add">
+    			<button title="Thêm mới"><i class="fa fa-file-o"></i></button>
+    		</div>   		
+    	</div>
+      <div class="item">
+	      	<div class="item-img">
+	        <img src="r9.png">
+	    	</div>
+	    	<div class="item-content">
+	        <span>Rượu vang đỏ<button style="font-size:25px" title="Sửa"><i class="fa fa-edit"></i></button></span>
+	        <span>Giá tiền: <button><i class="fa fa-minus-square-o"></i></button><input type="text" name="" placeholder="495.000"><button><i class="fa fa-plus-square-o"></i></button> VND</span>
+	        <span>Số lượng: <button><i class="fa fa-minus-square-o"></i></button><input type="text" name="" placeholder="15"><button><i class="fa fa-plus-square-o"></i></button></span>
+	        <button class="save" title="Lưu"><i class="fa fa-check"></i></button>
+	        <button class="cancel" title="Hủy"><i class="fa fa-close"></i></button>        
+			</div>      
+      </div>
+      <div class="item">
+	      	<div class="item-img">
+	        <img src="r9.png">
+	    	</div>
+	    	<div class="item-content">
+	        <span>Ruou vang do <button style="font-size:25px" title="Sửa"><i class="fa fa-edit"></i></button></span>
+	        <span>Giá tiền: <button><i class="fa fa-minus-square-o"></i></button><input type="text" name="" placeholder="495.000"><button><i class="fa fa-plus-square-o"></i></button> VND</span>
+	        <span>Số lượng: <button><i class="fa fa-minus-square-o"></i></button><input type="text" name="" placeholder="15"><button><i class="fa fa-plus-square-o"></i></button></span>
+	        <button class="save" title="Lưu"><i class="fa fa-check"></i></button>
+	        <button class="cancel" title="Hủy"><i class="fa fa-close"></i></button>        
+			</div>      
+      </div>
+      <div class="item">
+	      	<div class="item-img">
+	        <img src="r9.png">
+	    	</div>
+	    	<div class="item-content">
+	        <span>Ruou vang do <button style="font-size:25px" title="Sửa"><i class="fa fa-edit"></i></button></span>
+	        <span>Giá tiền: <button><i class="fa fa-minus-square-o"></i></button><input type="text" name="" placeholder="495.000"><button><i class="fa fa-plus-square-o"></i></button> VND</span>
+	        <span>Số lượng: <button><i class="fa fa-minus-square-o"></i></button><input type="text" name="" placeholder="15"><button><i class="fa fa-plus-square-o"></i></button></span>
+	        <button class="save" title="Lưu"><i class="fa fa-check"></i></button>
+	        <button class="cancel" title="Hủy"><i class="fa fa-close"></i></button>        
+			</div>      
+      </div>
+    </div>
+    <div id="Customers" class="tabcontent">
+      <div class="cus-tab">
+        <div class="name">
+          <h3>Họ và Tên</h3>
+        </div>
+        <div class="email">
+          <h3>Email</h3>
+        </div>
+        <div class="address">
+          <h3>Địa chỉ</h3>
+        </div>        
+      </div>
+      <div class="customer">
+        <div class="name">
+          <p>abc</p>
+        </div>
+        <div class="email">
+          <p>abc@gmail.com</p>
+        </div>
+        <div class="address">
+          <p>xyz P.1 Q.2 TP.3</p>
+        </div>
+      </div>
+      <div class="customer">
+        <div class="name">
+          <p>abc</p>
+        </div>
+        <div class="email">
+          <p>abc@gmail.com</p>
+        </div>
+        <div class="address">
+          <p>xyz P.1 Q.2 TP.3</p>
+        </div>
+      </div>
+      <div class="customer">
+        <div class="name">
+          <p>abc</p>
+        </div>
+        <div class="email">
+          <p>abc@gmail.com</p>
+        </div>
+        <div class="address">
+          <p>xyz P.1 Q.2 TP.3</p>
+        </div>
+      </div>
+    </div>
+    <div id="Billing" class="tabcontent">
+        <div class="bill-tab">
+          <div class="bill-code">
+            <h3>Mã hóa đơn</h3>
+          </div>
+          <div class="bill-name">
+            <h3>Tên khách hàng</h3>
+          </div>
+          <div class="bill-item">
+            <h3>Sản phẩm</h3>
+          </div>
+          <div class="bill-address">
+            <h3>Địa chỉ</h3>
+          </div>          
+        </div>
+        <div class="bill">
+          <div class="bill-code">
+            <p>HD001</p>
+          </div>
+          <div class="bill-name">
+            <p>ABC</p>
+          </div>
+          <div class="bill-item">
+            <p>Rượu vang trắng</p>
+            <p>Rượu vang đỏ</p>
+            <p>Champagne</p>
+          </div>
+          <div class="bill-address">
+            <p>XYZ P.1 Q.2 TP.3</p>
+          </div>
+        </div>
+        <div class="bill">
+          <div class="bill-code">
+            <p>HD002</p>
+          </div>
+          <div class="bill-name">
+            <p>ABC</p>
+          </div>
+          <div class="bill-item">
+            <p>Rượu vang trắng</p>
+            <p>Rượu vang đỏ</p>
+            <p>Champagne</p>
+          </div>
+          <div class="bill-address">
+            <p>XYZ P.1 Q.2 TP.3</p>
+          </div>
+        </div>
+        <div class="bill">
+          <div class="bill-code">
+            <p>HD003</p>
+          </div>
+          <div class="bill-name">
+            <p>ABC</p>
+          </div>
+          <div class="bill-item">
+            <p>Rượu vang trắng</p>
+            <p>Rượu vang đỏ</p>
+            <p>Champagne</p>
+          </div>
+          <div class="bill-address">
+            <p>XYZ P.1 Q.2 TP.3</p>
+          </div>
+        </div>              
+    </div>
+</div>
+<script>
+function openCity(evt, adminOption) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(adminOption).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Items', 'Product in warehouse'],
+  ['Rượu vang trắng', 50],
+  ['Rượu vang đỏ', 45],
+  ['Rượu sâm banh', 10],
+  ['Rượu vang hoa hồng', 7],
+  ['Volka', 8]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Thống kê sản phẩm', 'width':600, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+</body>
+</html>

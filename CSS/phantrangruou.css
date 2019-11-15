@@ -40,6 +40,7 @@ body{
 	margin-top: 2%;
 }
 .set-star{
+	color: #333333;
 	width: 10%;
 	float: left;
 	margin-top: -1.5%;
@@ -52,7 +53,7 @@ body{
 }
 #product-details{
 	font-family:Montserrat;
-	color: #202020;
+	color: #333333;
 	font-weight: bold;
 	font-size: 50px;
 	margin-top: 5px;
@@ -86,10 +87,31 @@ body{
 	text-align: center;
 }
 #royalwine{
-	font-size: 25px;
+	font-size: 35px;
 	color: #EAC47D;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+.filter{
+	margin-top: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	height: 35px;
+	width:50%;
+	margin-left: 50px;
+	background-color: #DC4C46;
+	border:1px solid #DC4C46;
+}
+.FromTo{
+	text-align:center;
+	max-width: 35%;
+	height: 20px;
+	margin-left: 10px;
+	margin-right:10px;
+	border-radius: 5px;
+	border:none;
+	border:1px solid #ccc;
+
 }
 #ourproducts{
 	margin-top: 5px;

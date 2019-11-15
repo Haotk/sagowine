@@ -63,7 +63,7 @@ body{
 }
 .product{
 	background-color: white;
-	width: 70%;
+	width: 65%;
 	padding: 5px;
 	height: auto;
 	max-height: auto;
@@ -145,12 +145,12 @@ body{
 
 .discount-total{
 	width: 27%;
-	float: right;
+	float: left;
 	height: 100%;
+	margin-left: 2.5%;
 }
 .discount-code {
 	margin-top: 5px;
-	margin-left: 5%;
 }
 .discount-code b{
 	font-family: Marcellus,sans-serif;
